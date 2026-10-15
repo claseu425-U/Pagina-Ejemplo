@@ -1,13 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <title>Nombre del sitio</title>
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <h1>Lavado autos</h1>
-  <p>Sitio web creado por Jordan.</p>
-   <p>Test </p>
+<header class="header">
+  <a href="index.html" class="logo">Mi Sitio</a>
+
+  <button class="hamburguesa" id="btnMenu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="menu" id="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="portada contenedor">
+    <h1>Lavado de autos a domicilio</h1>
+    <p>Dejamos su carro como nuevo sin que tenga que salir de casa.</p>
+    <a href="contacto.html" class="boton">Reservar</a>
+  </section>
+
+  <section class="servicios contenedor">
+    <div class="cards">
+  <article class="tarjeta">
+    <img src="img/servicio-1.jpg" alt="Servicio 1">
+    <h3>Título</h3>
+    <p>Descripción breve.</p>
+    <a href="#" class="boton">Ver más</a>
+  </article>
+  <article class="tarjeta">
+    <img src="img/servicio-1.jpg" alt="Servicio 1">
+    <h3>Título</h3>
+    <p>Descripción breve.</p>
+    <a href="#" class="boton">Ver más</a>
+  </article>
+  <article class="tarjeta">
+    <img src="img/servicio-1.jpg" alt="Servicio 1">
+    <h3>Título</h3>
+    <p>Descripción breve.</p>
+    <a href="#" class="boton">Ver más</a>
+  </article>
+  <article class="tarjeta">
+    <img src="img/servicio-1.jpg" alt="Servicio 1">
+    <h3>Título</h3>
+    <p>Descripción breve.</p>
+    <a href="#" class="boton">Ver más</a>
+  </article>
+  <article class="tarjeta">
+    <img src="img/servicio-1.jpg" alt="Servicio 1">
+    <h3>Título</h3>
+    <p>Descripción breve.</p>
+    <a href="#" class="boton">Ver más</a>
+  </article>
+  <article class="tarjeta">
+    <img src="img/servicio-1.jpg" alt="Servicio 1">
+    <h3>Título</h3>
+    <p>Descripción breve.</p>
+    <a href="#" class="boton">Ver más</a>
+  </article>
+  
+  <!-- repite el article hasta tener seis tarjetas -->
+</div>
+  </section>
+
+  <section class="galeria contenedor">
+    <h2>Galería</h2>
+    <p>Algunos de nuestros trabajos.</p>
+     <img src="img/image_1.webp" alt="Auto recién lavado frente a una casa">
+     <img src="img/image_2.webp" alt="Interior de un auto aspirado y limpio">
+      
+</section>
+
+<section class="preguntas contenedor">
+  <h2>Preguntas frecuentes</h2>
+  <div class="accordion">
+    <div class="item">
+      <button class="titulo">¿Pregunta uno?</button>
+      <div class="contenido"><p>Respuesta uno.</p></div>
+    </div>
+    <div class="item activo">
+      <button class="titulo">¿Pregunta uno?</button>
+      <div class="contenido"><p>Respuesta uno.</p></div>
+    </div>
+    <div class="item">
+      <button class="titulo">¿Pregunta uno?</button>
+      <div class="contenido"><p>Respuesta uno.</p></div>
+    </div>
+    <div class="item">
+      <button class="titulo">¿Pregunta uno?</button>
+      <div class="contenido"><p>Respuesta uno.</p></div>
+    </div>
+    <!-- repite .item hasta tener cuatro preguntas -->
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div>
+    <p><strong>Mi Sitio</strong></p>
+    <p>Teléfono: 2222-2222 · Correo: info@misitio.com</p>
+  </div>
+  <ul class="redes">
+    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+  </ul>
+  <p>&copy; 2026 Mi Sitio</p>
+</footer>
+  <script src="js/main.js"></script>
 </body>
 </html>

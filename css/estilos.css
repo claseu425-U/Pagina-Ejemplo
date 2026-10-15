@@ -1,0 +1,189 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: var(--color-texto); }
+img { max-width: 100%; height: auto; }
+
+:root {
+  --color-principal: #0b5ed7;
+  --color-texto: #222;
+  --ancho-max: 1140px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {                     /* logo a un lado, menú al otro */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-principal);
+  text-decoration: none;
+}
+
+.menu ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+.menu a { color: var(--color-texto); text-decoration: none; }
+.menu a:hover { color: var(--color-principal); }
+
+.hamburguesa {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: .5rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.hamburguesa span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: var(--color-texto);
+  border-radius: 2px;
+  transition: transform .2s, opacity .2s;   /* para animarlas en la clase 4 */
+}
+
+.portada {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: var(--color-principal);
+  color: #fff;
+}
+
+.portada h1 { margin: 0 0 1rem; font-size: 1.8rem; }
+
+.boton {
+  display: inline-block;
+  padding: .6rem 1.2rem;
+  background: var(--color-principal);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.portada .boton {             /* clase + clase = peso 20: gana a .boton */
+  background: #fff;
+  color: var(--color-principal);
+}
+
+.portada {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: var(--color-principal);
+  color: #fff;
+}
+
+.portada h1 { margin: 0 0 1rem; font-size: 1.8rem; }
+
+.boton {
+  display: inline-block;
+  padding: .6rem 1.2rem;
+  background: var(--color-principal);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.portada .boton {             /* clase + clase = peso 20: gana a .boton */
+  background: #fff;
+  color: var(--color-principal);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  background: #222;
+  color: #fff;
+  text-align: center;
+}
+
+.footer a { color: #fff; }
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+.cards { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+.tarjeta {
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  overflow: hidden;
+  transition: transform .2s;
+}
+.tarjeta:hover { transform: translateY(-4px); }
+
+@media (min-width: 701px) { .tarjeta { width: calc(50% - .5rem); } }
+@media (min-width: 991px) { .tarjeta { width: calc(33.333% - .67rem); } }
+
+.accordion .titulo {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  font-size: 1rem;
+  background: #f1f3f5;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.accordion .contenido { display: none; padding: 0 1rem; }
+.accordion .item.activo .contenido { display: block; }
+
+
+/* base: celular */
+.menu { display: none; }        /* lo abrirá la hamburguesa */
+.header { flex-wrap: wrap; }          /* el menú abierto baja a otra línea */
+.menu { width: 100%; }
+.menu.abierto { display: block; }
+.menu.abierto ul { flex-direction: column; padding-top: 1rem; }
+
+
+.hamburguesa.activo span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburguesa.activo span:nth-child(2) { opacity: 0; }
+.hamburguesa.activo span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+@media (min-width: 501px) {
+  .portada h1 { font-size: 2.1rem; }
+}
+
+@media (min-width: 701px) {
+  .portada { padding: 4rem 2rem; }
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+@media (min-width: 991px) {
+  .menu { display: block; }    /* siempre visible en escritorio */   
+  .hamburguesa { display: none; }
+  .portada h1 { font-size: 2.6rem; }
+.menu.abierto ul { flex-direction: row; padding-top: 0; }
+}
